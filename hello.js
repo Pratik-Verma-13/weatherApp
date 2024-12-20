@@ -41,7 +41,7 @@ function fetchData() {
     
     const cityName = document.getElementById("search").value.toLowerCase()
     cityDisplay.textContent = cityName.toUpperCase()
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=7bcbcc5f7080467fb8c134506241612&q=${cityName}&days=1&aqi=yes&alerts=yes`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=7bcbcc5f7080467fb8c134506241612&q=${cityName}&days=1&aqi=yes&alerts=yes`)
         .then((response) => response.json())
         .then((data) => {
             temperature.textContent = (data.current.temp_c);
